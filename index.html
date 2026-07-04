@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Technocrats India</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+:root{
+  --primary:#4da3ff;
+  --secondary:#7b61ff;
+  --dark:#070B1A;
+  --dark2:#11182D;
+  --card:#151D35;
+  --text:#EAF1FF;
+  --muted:#9FAFD1;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+  radial-gradient(circle at top right, rgba(77,163,255,0.15), transparent 30%),
+  radial-gradient(circle at bottom left, rgba(123,97,255,0.15), transparent 30%),
+  linear-gradient(180deg,#050816 0%, #0D1328 100%);
+  font-family:'Segoe UI',sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  padding-bottom:100px;
+}
+
+/* HEADER */
+
+.topbar{
+  padding:20px;
+}
+
+.logo-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:14px;
+  padding:6px;
+}
+
+.logo h4{
+  margin:0;
+  font-size:20px;
+  font-weight:700;
+}
+
+.logo span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* SUPPORT FLOAT */
+
+.support-float{
+  width:55px;
+  height:55px;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(37,99,235,0.35);
+  transition:0.3s;
+}
+
+.support-float:hover{
+  transform:scale(1.08);
+}
+
+/* HERO */
+
+.hero-card{
+  margin:10px 20px 25px;
+  background:linear-gradient(135deg,#121C37 0%, #1B2952 100%);
+  border-radius:28px;
+  padding:35px 25px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+.hero-card::before{
+  content:'';
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:rgba(77,163,255,0.12);
+  border-radius:50%;
+  top:-80px;
+  right:-60px;
+}
+
+.hero-card::after{
+  content:'';
+  position:absolute;
+  width:140px;
+  height:140px;
+  background:rgba(123,97,255,0.12);
+  border-radius:50%;
+  bottom:-50px;
+  left:-30px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero-badge{
+  display:inline-block;
+  background:rgba(77,163,255,0.15);
+  color:#fff;
+  padding:8px 15px;
+  border-radius:50px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero-title{
+  font-size:34px;
+  line-height:1.2;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.hero-title span{
+  color:var(--primary);
+}
+
+.hero-text{
+  color:#c7d3f5;
+  font-size:15px;
+  margin-bottom:25px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg,var(--primary),#6bb6ff);
+  color:#fff;
+  padding:13px 22px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  color:#fff;
+}
+
+/* SECTION */
+
+.section{
+  padding:0 20px 25px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.section-head h5{
+  margin:0;
+  font-weight:700;
+}
+
+.section-head a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+/* SERVICES */
+
+.service-card{
+  background:rgba(21,29,53,0.9);
+  border:1px solid rgba(255,255,255,0.05);
+  border-radius:22px;
+  padding:22px 15px;
+  text-align:center;
+  transition:0.3s;
+  height:100%;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+}
+
+.service-icon{
+  width:62px;
+  height:62px;
+  background:linear-gradient(135deg, rgba(77,163,255,0.18), rgba(123,97,255,0.18));
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 15px;
+  font-size:28px;
+}
+
+.service-card h6{
+  margin-bottom:8px;
+}
+
+.service-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* STATS */
+
+.stats-card{
+  background:linear-gradient(135deg,#11192F,#182543);
+  border-radius:24px;
+  padding:25px;
+}
+
+.stat-box h3{
+  color:var(--primary);
+  font-weight:800;
+}
+
+.stat-box p{
+  margin:0;
+  color:var(--muted);
+}
+
+/* WORK */
+
+.work-card{
+  background:rgba(21,29,53,0.95);
+  border-radius:22px;
+  overflow:hidden;
+  margin-bottom:18px;
+}
+
+.work-card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+
+.work-content{
+  padding:18px;
+}
+
+.tag{
+  display:inline-block;
+  background:rgba(77,163,255,0.12);
+  color:var(--primary);
+  padding:7px 14px;
+  border-radius:50px;
+  font-size:12px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+  background:linear-gradient(135deg,#151D35,#1A2443);
+  border-radius:22px;
+  padding:22px;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:15px;
+}
+
+.user img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+  position:fixed;
+  left:15px;
+  right:15px;
+  bottom:18px;
+  background:rgba(16,24,44,0.95);
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  padding:14px 10px;
+  display:flex;
+  justify-content:space-around;
+  z-index: 99;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  color:#8f9fc5;
+  font-size:13px;
+  text-align:center;
+}
+
+.bottom-nav a.active{
+  color:var(--primary);
+}
+
+.bottom-nav span{
+  display:block;
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+/* OVERLAYS */
+
+.enquiry-overlay,
+.support-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  z-index:9998;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+}
+
+.enquiry-overlay.active,
+.support-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* PANELS */
+
+.enquiry-panel,
+.support-panel{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:-100%;
+  background:#111827;
+  border-radius:30px 30px 0 0;
+  padding:25px 20px;
+  z-index:9999;
+  transition:0.4s ease;
+  max-height:95vh;
+  overflow-y:auto;
+}
+
+.enquiry-panel.active,
+.support-panel.active{
+  bottom:0;
+}
+
+/* DRAG LINE */
+
+.drag-line{
+  width:70px;
+  height:6px;
+  background:#374151;
+  border-radius:20px;
+  margin:0 auto 20px;
+}
+
+/* TITLES */
+
+.enquiry-title,
+.support-title{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.enquiry-subtitle,
+.support-subtitle{
+  color:#94a3b8;
+  margin-bottom:25px;
+  font-size:14px;
+}
+
+/* FORM */
+
+.enquiry-form .form-control,
+.enquiry-form .form-select,
+.support-form .form-control{
+  background:#1f2937;
+  border:none;
+  min-height:55px;
+  border-radius:16px;
+  color:#fff;
+  margin-bottom:15px;
+  padding:15px;
+}
+
+.support-form textarea.form-control{
+  min-height:120px;
+  resize:none;
+}
+
+.enquiry-form .form-select{
+  color:#94a3b8;
+}
+
+.enquiry-form .form-control:focus,
+.enquiry-form .form-select:focus,
+.support-form .form-control:focus{
+  background:#1f2937;
+  color:#fff;
+  box-shadow:none;
+  border:1px solid #3b82f6;
+}
+
+/* BUTTON */
+
+.submit-btn,
+.support-btn{
+  width:100%;
+  height:55px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  color:#fff;
+  font-weight:600;
+}
+
+.enquiry-success,
+.support-success{
+  text-align:center;
+  color:#4ade80;
+  margin-top:15px;
+  display:none;
+}
+
+/* PLACEHOLDER COLOR */
+
+::placeholder{
+  color:#b8c5e2 !important;
+  opacity:1;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  color:#b8c5e2 !important;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+  color:#b8c5e2 !important;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder{
+  color:#b8c5e2 !important;
+}
+
+option{
+  color:#fff;
+  background:#1f2937;
+}
+
+/* =========================
+   BUTTON LOADING
+========================= */
+
+.submit-btn.loading,
+.support-btn.loading{
+
+  pointer-events:none;
+  opacity:0.9;
+
+}
+
+.btn-loader{
+
+  width:18px;
+  height:18px;
+  border:2px solid rgba(255,255,255,0.4);
+  border-top:2px solid #fff;
+  border-radius:50%;
+  display:inline-block;
+  animation:spin .7s linear infinite;
+  vertical-align:middle;
+  margin-right:8px;
+
+}
+
+@keyframes spin{
+
+  100%{
+    transform:rotate(360deg);
+  }
+
+}
+
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+
+.success-popup{
+
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0.8);
+
+  width:320px;
+
+  background:#111827;
+
+  padding:30px 20px;
+
+  border-radius:24px;
+
+  text-align:center;
+
+  z-index:99999;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.35s ease;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+
+}
+
+.success-popup.active{
+
+  opacity:1;
+  visibility:visible;
+
+  transform:translate(-50%,-50%) scale(1);
+
+}
+
+.success-icon{
+
+  width:80px;
+  height:80px;
+
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0 auto 18px;
+
+  font-size:38px;
+  color:#fff;
+
+  animation:popupScale .5s ease;
+
+}
+
+@keyframes popupScale{
+
+  0%{
+    transform:scale(0.5);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+.success-popup h3{
+
+  font-size:24px;
+  margin-bottom:10px;
+
+}
+
+.success-popup p{
+
+  color:#94a3b8;
+  margin:0;
+
+}
+
+/* =========================
+   PORTFOLIO AUTO SLIDER
+========================= */
+
+.portfolio-slider{
+
+  overflow:hidden;
+  width:100%;
+  position:relative;
+
+}
+
+.portfolio-track{
+
+  display:flex;
+  gap:18px;
+  width:max-content;
+
+  animation:portfolioScroll 55s linear infinite;
+
+}
+
+.portfolio-track:hover{
+
+  animation-play-state:paused;
+
+}
+
+.portfolio-slider .work-card{
+
+  width:320px;
+  flex-shrink:0;
+  margin-bottom:0;
+
+}
+
+@keyframes portfolioScroll{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="topbar">
+
+  <div class="logo-box">
+
+    <div class="logo">
+      <img src="./img/technocrats-logo-removebg-preview.png">
+
+      <div>
+        <h4>Technocrats India</h4>
+        <span>ISO 9001:2015 Certified</span>
+      </div>
+    </div>
+
+    <div class="support-float" onclick="openSupportForm()">
+      💬
+    </div>
+
+  </div>
+
+</div>
+
+<!-- HERO -->
+
+<div class="hero-card">
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      🚀 Trusted Digital Growth Partner
+    </div>
+
+    <h1 class="hero-title">
+      Grow Your Brand With
+      <span>Creative Digital Solutions</span>
+    </h1>
+
+    <p class="hero-text">
+      Web development, SEO, social media marketing, paid ads, branding and complete business growth solutions under one roof.
+    </p>
+
+    <a href="javascript:void(0)" class="hero-btn" onclick="openEnquiryForm()">
+      Start New Project →
+    </a>
+
+  </div>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="section">
+
+  <div class="section-head">
+    <h5>Our Services</h5>
+    <a href="services.html">View All</a>
+  </div>
+
+  <div class="row g-3">
+
+    <div class="col-6">
+      <a href="website-design.html" style="text-decoration:none;">
+        <div class="service-card">
+          <div class="service-icon">🌐</div>
+          <h6 style="color: #fff;">Website Design</h6>
+          <p>Modern responsive websites</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6">
+      <a href="app-development.html" style="text-decoration:none;">
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h6 style="color: #fff;">App Development</h6>
+          <p>Android & iOS mobile applications</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6">
+      <a href="social-media-marketing.html" style="text-decoration:none;">
+        <div class="service-card">
+          <div class="service-icon">📣</div>
+          <h6 style="color: #fff;">Social Media Marketing</h6>
+          <p>Grow audience and engagement</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-6">
+      <a href="seo-optimization.html" style="text-decoration:none;">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h6 style="color: #fff;">SEO Optimization</h6>
+          <p>Improve Google search ranking</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- STATS -->
+
+<div class="section">
+
+  <div class="stats-card">
+
+    <div class="row text-center">
+
+      <div class="col-4 stat-box">
+        <h3>15+</h3>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="col-4 stat-box">
+        <h3>1500+</h3>
+        <p>Satisfied Clients</p>
+      </div>
+
+      <div class="col-4 stat-box">
+        <h3>5★</h3>
+        <p>Google Rating</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PORTFOLIO -->
+
+<!-- RECENT WORKS -->
+
+<div class="section">
+
+  <div class="section-head">
+    <h5>Brands We Empower</h5>
+  </div>
+
+  <div class="portfolio-slider">
+
+    <div class="portfolio-track">
+
+      <!-- PROJECT 1 -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Real Estate Website</h6>
+
+          <p>
+            Complete responsive property listing platform with SEO optimization.
+          </p>
+
+          <span class="tag">
+            Website Development
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Ecommerce Store</h6>
+
+          <p>
+            Modern online shopping website with payment gateway integration.
+          </p>
+
+          <span class="tag">
+            Ecommerce Development
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Corporate Branding</h6>
+
+          <p>
+            Full branding and digital marketing campaign for startup business.
+          </p>
+
+          <span class="tag">
+            Branding & Marketing
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 4 -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Mobile App UI Design</h6>
+
+          <p>
+            Clean and modern mobile application interface for business growth.
+          </p>
+
+          <span class="tag">
+            UI/UX Design
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 5 -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>SEO Growth Campaign</h6>
+
+          <p>
+            Organic traffic boosting campaign with advanced SEO strategy.
+          </p>
+
+          <span class="tag">
+            SEO Optimization
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Real Estate Website</h6>
+
+          <p>
+            Complete responsive property listing platform with SEO optimization.
+          </p>
+
+          <span class="tag">
+            Website Development
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Ecommerce Store</h6>
+
+          <p>
+            Modern online shopping website with payment gateway integration.
+          </p>
+
+          <span class="tag">
+            Ecommerce Development
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Corporate Branding</h6>
+
+          <p>
+            Full branding and digital marketing campaign for startup business.
+          </p>
+
+          <span class="tag">
+            Branding & Marketing
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>Mobile App UI Design</h6>
+
+          <p>
+            Clean and modern mobile application interface for business growth.
+          </p>
+
+          <span class="tag">
+            UI/UX Design
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="work-content">
+
+          <h6>SEO Growth Campaign</h6>
+
+          <p>
+            Organic traffic boosting campaign with advanced SEO strategy.
+          </p>
+
+          <span class="tag">
+            SEO Optimization
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLIENT LOGO SECTION -->
+<div class="section">
+  <div class="section-head">
+    <h5>Trusted By Businesses</h5>
+  </div>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- LOGOS -->
+      <div class="logo-card">
+        <img src="img/appolo.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/kurlon.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/patanjali.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/the-circle.jpg">
+      </div>
+      <div class="logo-card">
+        <img src="img/spring.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/space-circle.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/ner.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/sunrise.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/bansal.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/vhollander.png">
+      </div>
+      <!-- DUPLICATE FOR SMOOTH LOOP -->
+      <div class="logo-card">
+        <img src="img/genset.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/goldilocks.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/sunrise.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/bansal.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/vhollander.png">
+      </div>
+      <!-- DUPLICATE FOR SMOOTH LOOP -->
+      <div class="logo-card">
+        <img src="img/genset.png">
+      </div>
+      <div class="logo-card">
+        <img src="img/goldilocks.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* CLIENT LOGO SECTION */
+.logo-slider{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  margin-top:15px;
+}
+
+.logo-track{
+  display:flex;
+  gap:16px;
+  width:max-content;
+  animation:scrollLogo 30s linear infinite;
+}
+
+.logo-card{
+  width:65px;
+  height:65px;
+  border-radius:15px;
+  background:rgba(21,29,53,0.95);
+  border:1px solid rgba(255,255,255,0.07);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.logo-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    /* filter: invert(1); */
+    /* opacity: 0.9; */
+    background: white;
+    border-radius: 15px;
+}
+
+@keyframes scrollLogo{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+</style>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+  <a href="index.html" class="active">
+    <span>🏠</span>
+    Home
+  </a>
+
+  <a href="services.html">
+    <span>💼</span>
+    Services
+  </a>
+
+  <a href="hub.html">
+    <span>🎬</span>
+    Hub
+  </a>
+
+  <a href="contact.html">
+    <span>📞</span>
+    Contact
+  </a>
+
+</div>
+
+<!-- ENQUIRY OVERLAY -->
+
+<div class="enquiry-overlay" id="enquiryOverlay" onclick="closeEnquiryForm()"></div>
+
+<div class="enquiry-panel" id="enquiryPanel">
+
+  <div class="drag-line"></div>
+
+  <h3 class="enquiry-title">
+    New Project Enquiry
+  </h3>
+
+  <p class="enquiry-subtitle">
+    Fill out the form and our team will contact you shortly.
+  </p>
+
+  <form id="enquiryForm" class="enquiry-form">
+
+    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+
+    <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+
+    <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+
+    <input type="text" class="form-control" name="company" placeholder="Company Name" required>
+
+    <select class="form-select" name="service" required>
+
+      <option value="">Choose Service</option>
+
+      <option>Website Development</option>
+      <option>App Development</option>
+      <option>Software Development</option>
+      <option>SEO Optimization</option>
+      <option>Podcast</option>
+      <option>Trade Mark</option>
+      <option>ISO Certificate</option>
+      <option>Product Photography</option>
+      <option>Social Media Marketing</option>
+      <option>VPS Cloud Hosting</option>
+
+    </select>
+
+    <button type="submit" class="submit-btn">
+      Submit Enquiry
+    </button>
+
+  </form>
+
+  <div class="enquiry-success" id="enquirySuccess">
+    Enquiry submitted successfully.
+  </div>
+
+</div>
+
+<!-- SUPPORT OVERLAY -->
+
+<div class="support-overlay" id="supportOverlay" onclick="closeSupportForm()"></div>
+
+<!-- SUPPORT PANEL -->
+
+<div class="support-panel" id="supportPanel">
+
+  <div class="drag-line"></div>
+
+  <h3 class="support-title">
+    Quick Support
+  </h3>
+
+  <p class="support-subtitle">
+    Tell us your requirement and our team will contact you shortly.
+  </p>
+
+  <form id="supportForm" class="support-form">
+
+    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+
+    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+
+    <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+
+    <textarea class="form-control" name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit" class="support-btn">
+      Submit Request
+    </button>
+
+  </form>
+
+  <div class="support-success" id="supportSuccess">
+    Support request submitted successfully.
+  </div>
+
+</div>
+
+
+<!-- SUCCESS POPUP -->
+
+<div class="success-popup" id="successPopup">
+
+  <div class="success-icon">
+    ✓
+  </div>
+
+  <h3>Success!</h3>
+
+  <p id="successMessage">
+    Form submitted successfully.
+  </p>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   OPEN / CLOSE FUNCTIONS
+========================= */
+
+function openEnquiryForm() {
+
+  document.getElementById('enquiryPanel').classList.add('active');
+  document.getElementById('enquiryOverlay').classList.add('active');
+
+}
+
+function closeEnquiryForm() {
+
+  document.getElementById('enquiryPanel').classList.remove('active');
+  document.getElementById('enquiryOverlay').classList.remove('active');
+
+}
+
+function openSupportForm() {
+
+  document.getElementById('supportPanel').classList.add('active');
+  document.getElementById('supportOverlay').classList.add('active');
+
+}
+
+function closeSupportForm() {
+
+  document.getElementById('supportPanel').classList.remove('active');
+  document.getElementById('supportOverlay').classList.remove('active');
+
+}
+
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+
+function showSuccess(message){
+
+  const popup = document.getElementById('successPopup');
+
+  document.getElementById('successMessage').innerText = message;
+
+  popup.classList.add('active');
+
+  setTimeout(() => {
+
+    popup.classList.remove('active');
+
+  },2500);
+
+}
+
+
+/* =========================
+   GOOGLE APPS SCRIPT URL
+========================= */
+
+const scriptURL =
+"https://script.google.com/macros/s/AKfycbydA9RRXSCyYnza6c0LKRtEje8HUJQ4spjMX_RNYGUXAvpQK98GeWUe1bswF9GwPYiM/exec";
+
+
+/* =========================
+   ENQUIRY FORM
+========================= */
+
+const enquiryForm = document.getElementById('enquiryForm');
+
+enquiryForm.addEventListener('submit', function(e){
+
+  e.preventDefault();
+
+  const btn = enquiryForm.querySelector('.submit-btn');
+
+  btn.classList.add('loading');
+
+  btn.innerHTML =
+  '<span class="btn-loader"></span>Submitting...';
+
+  const formData = new FormData(enquiryForm);
+
+  formData.append("formType", "Enquiry");
+
+  fetch(scriptURL, {
+
+    method: "POST",
+    body: formData
+
+  })
+
+  .then(response => response.text())
+
+  .then(data => {
+
+    enquiryForm.reset();
+
+    closeEnquiryForm();
+
+    showSuccess("Enquiry Submitted Successfully");
+
+    btn.classList.remove('loading');
+
+    btn.innerHTML = 'Submit Enquiry';
+
+    console.log(data);
+
+  })
+
+  .catch(error => {
+
+    alert("Enquiry Form Failed");
+
+    btn.classList.remove('loading');
+
+    btn.innerHTML = 'Submit Enquiry';
+
+    console.log(error);
+
+  });
+
+});
+
+
+/* =========================
+   SUPPORT FORM
+========================= */
+
+const supportForm = document.getElementById('supportForm');
+
+supportForm.addEventListener('submit', function(e){
+
+  e.preventDefault();
+
+  const btn = supportForm.querySelector('.support-btn');
+
+  btn.classList.add('loading');
+
+  btn.innerHTML =
+  '<span class="btn-loader"></span>Submitting...';
+
+  const formData = new FormData(supportForm);
+
+  formData.append("formType", "Support");
+
+  fetch(scriptURL, {
+
+    method: "POST",
+    body: formData
+
+  })
+
+  .then(response => response.text())
+
+  .then(data => {
+
+    supportForm.reset();
+
+    closeSupportForm();
+
+    showSuccess("Support Request Submitted");
+
+    btn.classList.remove('loading');
+
+    btn.innerHTML = 'Submit Request';
+
+    console.log(data);
+
+  })
+
+  .catch(error => {
+
+    alert("Support Form Failed");
+
+    btn.classList.remove('loading');
+
+    btn.innerHTML = 'Submit Request';
+
+    console.log(error);
+
+  });
+
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>

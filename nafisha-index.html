@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Technocrats India</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#0b1020;
+    font-family:'Segoe UI',sans-serif;
+    color:#fff;
+    margin:0;
+    padding-bottom:90px;
+}
+
+/* HEADER */
+
+.header{
+    background:#0f172a;
+    padding:18px 15px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    text-align:center;
+}
+
+.logo img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+}
+
+/* BANNER */
+
+.banner-section{
+    margin:20px 15px;
+    padding:30px 20px;
+    border-radius:25px;
+    background:
+    linear-gradient(145deg,#05071D,#05071D);
+    border:1px solid rgba(255,255,255,0.06);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+    text-align:center;
+}
+
+.banner-section img{
+    width:100%;
+    max-width:260px;
+    margin-bottom:20px;
+}
+
+.banner-section h5{
+    color:#60a5fa;
+    font-size:15px;
+    margin-bottom:8px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+.banner-section h2{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.banner-section p{
+    color:#94a3b8;
+    font-size:15px;
+    margin:0;
+}
+
+/* SECTION */
+
+.section{
+    padding:0 15px 20px;
+}
+
+.section h5{
+    color:#fff;
+    margin-bottom:18px;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* BUTTON CARDS */
+
+.card-btn{
+    background:linear-gradient(145deg,#131c31,#1b2742);
+    border-radius:22px;
+    padding:25px 15px;
+    text-align:center;
+    color:#fff;
+    font-weight:600;
+    transition:0.3s ease;
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.25);
+    height:100%;
+    cursor:pointer;
+}
+
+.card-btn:hover{
+    transform:translateY(-5px);
+    border-color:#3b82f6;
+}
+
+.card-btn{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.card-btn a{
+    color:#60a5fa !important;
+    font-size:14px !important;
+    text-decoration:none;
+}
+
+/* PORTFOLIO & TESTIMONIAL */
+
+.card{
+    background:#131c31;
+    border:none;
+    border-radius:18px;
+    padding:18px !important;
+    margin-bottom:14px;
+    color:#dbe4ff;
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+.footer-nav{
+    position:fixed;
+    bottom:12px;
+    left:12px;
+    right:12px;
+    width:auto;
+    background:rgba(15,23,42,0.92);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:8px 0;
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+.footer-nav a{
+    color:#94a3b8;
+    text-decoration:none;
+    font-size:13px;
+    transition:0.3s;
+    padding:10px;
+}
+
+.footer-nav a.active{
+    color:#60a5fa;
+    font-weight:600;
+}
+
+.footer-nav a:hover{
+    color:#60a5fa;
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+    .banner-section h2{
+        font-size:26px;
+    }
+
+    .card-btn{
+        padding:22px 10px;
+        font-size:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+    <div class="logo">
+        <img src="./img/technocrats-logo-removebg-preview.png" alt="Technocrats India Logo">
+    </div>
+</div>
+
+<!-- BANNER -->
+
+<div class="banner-section">
+
+    <img src="./img/misc-16.png" alt="Technocrats Hub Banner">
+
+    <h5>WELCOME TO</h5>
+
+    <h2>Technocrats India</h2>
+
+    <p>Your Growth Partner in Digital Innovation</p>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="container section">
+
+    <div class="row g-3">
+
+        <div class="col-6">
+            <div class="card-btn">
+                📞<br>
+                Quick Call
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card-btn">
+                💬<br>
+                Chat with Team
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card-btn">
+                🎫<br>
+                Support Ticket
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card-btn">
+                🚀<br>
+                New Project
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card-btn">
+                📅<br>
+
+                <span style="font-size:14px;">
+                    Meeting Booking
+                </span>
+
+                <br>
+
+                <a href="#">Online</a> /
+                <a href="#">Offline</a>
+
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card-btn">
+                🏷️<br>
+                Offers
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PORTFOLIO -->
+
+<div class="container section">
+
+    <h5>Portfolio</h5>
+
+    <div class="card">
+        Website Development Project
+    </div>
+
+    <div class="card">
+        Mobile App Development
+    </div>
+
+    <div class="card">
+        Ecommerce Solutions
+    </div>
+
+</div>
+
+<!-- TESTIMONIALS -->
+
+<div class="container section">
+
+    <h5>Testimonials</h5>
+
+    <div class="card">
+        "Excellent service and support!"
+    </div>
+
+    <div class="card">
+        "Highly professional IT solutions."
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer-nav">
+
+    <a href="#" class="active">
+        Home
+    </a>
+
+    <a href="#">
+        Menu
+    </a>
+
+    <a href="#">
+        Works
+    </a>
+
+    <a href="#">
+        About
+    </a>
+
+</div>
+
+</body>
+</html>
